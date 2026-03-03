@@ -31,7 +31,8 @@ LOGGER = logging.getLogger(__name__)
 
 # Argument parsing
 if __name__ == '__main__':
-    PARSER = argparse.ArgumentParser(description='A program for automatically downloading pdf files.')
+    PARSER = argparse.ArgumentParser(description=\
+                                     'A program for automatically downloading pdf files.')
     PARSER.add_argument("-t", "--test",
                         help="Run tests of pdf downloader",
                         action="store_true")
@@ -44,6 +45,7 @@ if __name__ == '__main__':
 
     # Setting logger verbosity
     # logger level can be one of DEBUG|INFO|WARNING|ERROR|CRITICAL
+    LOGGING_LEVEL = logging.CRITICAL
     if ARGS.verbosity == 0:
         LOGGING_LEVEL = logging.ERROR
     elif ARGS.verbosity == 1:
@@ -52,7 +54,7 @@ if __name__ == '__main__':
         LOGGING_LEVEL = logging.INFO
     elif ARGS.verbosity >= 3:
         LOGGING_LEVEL = logging.DEBUG
-    with open('logging_configuration.yaml', 'r') as f:
+    with open('logging_configuration.yaml', 'r', encoding="utf8") as f:
         CONFIG_DICT = yaml.safe_load(f.read())
         CONFIG_DICT['handlers']['console']['level'] = LOGGING_LEVEL
         CONFIG_DICT['handlers']['console']['filters'] = ['special']

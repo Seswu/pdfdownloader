@@ -13,6 +13,9 @@ core.dump
 # pandoc-generated docx files for internal/external communication
 *.docx
 
+# All excel files - used for input and simple database
+excel-data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

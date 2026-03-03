@@ -1,0 +1,45 @@
+- Ambitions
+  - Proof-of-concept testing
+  - Proof-of-concept logging
+  - Practice structure
+  - Practice linting
+  - ad-hoc AI experiments
+  - finishing project
+  - conscious comparisons between estimation time and completion time
+- Log
+  - Man  2/3
+    - Planning
+    - AI-distraction
+    - markdown-docx conversion attempt
+  - Tue  3/3
+    - Setup
+    - helper functions
+    - scrapy research
+    - bottom-up test-first
+    - scrapy logging fight
+  - Wed  4/3
+    - Scrapy logging fight
+    - scrapy dropped for requests
+    - basic test of requests download of pdf done
+    - basic test of excel file reading done
+    - basic test of excel file writing done
+- Discussion
+  - AI
+    - Time-saver
+      - Reformatting markdown-tables after editing
+      - Researching new libraries and modules
+    - Time-waster
+      - Plausible but incorrect code: How to call scrapy from a python script while retaining logging settings
+      - Plausible but incorrect guide: Where are the commits for a repository found on github (two AIs, one github's own)
+  - Scrapy vs Requests
+    - Requests
+      - Straightforward
+      - Limited features
+    - Scrapy
+      - Webscraping overkill for project
+      - Potentially useful error handling
+      - Efficient wrt bulk downloads
+      - Experience
+	- Module opinionated wrt logging
+	- Documentation claims otherwise
+	- Likely doable but would require careful (time-intensive) investigation
