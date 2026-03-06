@@ -16,6 +16,9 @@ core.dump
 # All excel files - used for input and simple database
 excel-data/
 
+# All .jar files ie from java helper programs
+*.jar
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

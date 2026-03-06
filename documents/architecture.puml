@@ -1,0 +1,71 @@
+@startuml
+allowmixing
+
+package "Internally Developed" {
+  package Control {
+    component runner_script
+    component main
+    component download_pdfs
+    interface test_pdfdownloader
+    hide empty members
+  }
+  package Configuration {
+    interface SoftwareSettings
+    class FiledSoftwareSettings
+    interface UserConfiguration
+    class FiledUserConfiguration
+    hide empty members
+  }
+  package Processing {
+    interface download_file
+    component requests_download_file
+    hide empty members
+  }
+  package Model {
+    interface ExcelFile
+    class ExcelFileImplementation
+    hide empty members
+  }
+}
+
+package "External Packages" {
+  package "Python Standard Packages" {
+    package logging {
+      interface getLogger
+      hide empty members
+    }
+    package pytest {
+      interface fixture
+      hide empty members
+    }
+    package requests {
+      interface get
+      hide empty members
+    }
+  }
+  package "PIP Packages" {
+    package pyyaml {
+      interface safe_load
+      hide empty members
+    }
+  }
+}
+
+runner_script ..> SoftwareSettings :uses
+SoftwareSettings --> FiledSoftwareSettings :implemented by
+
+main ..> UserConfiguration :uses
+UserConfiguration --> FiledUserConfiguration :implemented by
+
+download_pdfs ..> download_file :uses
+download_file --> requests_download_file :implemented by
+download_pdfs ..> ExcelFile :uses
+ExcelFile --> ExcelFileImplementation :implemented by
+
+test_pdfdownloader ..> Configuration :uses
+test_pdfdownloader ..> Processing :uses
+test_pdfdownloader ..> Model :uses
+
+"Internally Developed" ..> "External Packages" :uses
+
+@enduml

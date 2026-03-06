@@ -7,22 +7,33 @@
   - finishing project
   - conscious comparisons between estimation time and completion time
 - Log
-  - Man  2/3
-    - Planning
-    - AI-distraction
+  - Mon  2/3
+    - planning
+    - ai-distraction
     - markdown-docx conversion attempt
   - Tue  3/3
-    - Setup
+    - setup
     - helper functions
     - scrapy research
     - bottom-up test-first
     - scrapy logging fight
   - Wed  4/3
-    - Scrapy logging fight
+    - scrapy logging fight
     - scrapy dropped for requests
     - basic test of requests download of pdf done
     - basic test of excel file reading done
     - basic test of excel file writing done
+  - Thu 5/3
+    - restructure planning
+    - ooo meeting for sparring; solidity + discipline recommended
+    - consequences prediction: unfinished project
+    - mental compartmentalization: modified iron triange scope:quality:changes
+    - software architecture research
+    - restructure brainstorm / planning
+  - Fri 6/3
+    - discussion notes; pivoting consequences, process planning
+    - re-learning plantuml
+    - constructing diagram of software architecture
 - Discussion
   - AI
     - Time-saver
@@ -43,3 +54,31 @@
 	- Module opinionated wrt logging
 	- Documentation claims otherwise
 	- Likely doable but would require careful (time-intensive) investigation
+    - Mid-project Changes
+      - This tends to happen often
+      - Managers often do not acknowledge the consequences of it
+      - Modified Iron Triangle: Scope:Quality:Changes
+    - Project Conventions
+      - changes
+	- developing and collaborating as a team means conventions are needed
+      - planning
+	- scope of test coverage
+	- formalized interfaces
+      - documentation
+	- architectural overview
+      - style
+	- careful naming
+	- conscious, intentional choices of programming paradigms
+	- compartmentalization
+      - automation
+	- linting: pylint, flake8
+	- standardized testing: pytest
+	- capable logging: verbosity and filtering by module
+      - tools
+	- git for revision control
+	  - rebase over merges; incremental changes visible in log
+	  - squash commits when necessary to only show significant changes
+	  - individual repositories pushed to shared main
+	  - everyone rebasing from shared main before pushing
+	- CI/CD
+	  - no automated continuous integration/delivery/deployment at this time
