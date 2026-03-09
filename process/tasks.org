@@ -1,11 +1,24 @@
-- Ambitions
-  - Proof-of-concept testing
-  - Proof-of-concept logging
-  - Practice structure
-  - Practice linting
-  - ad-hoc AI experiments
-  - finishing project
-  - conscious comparisons between estimation time and completion time
+- Prioroties
+  - Mon 2/3:
+    - Scope 6, quality 4, changes 0 assumed from project brief; unverified
+      - Proof-of-concept testing
+      - Proof-of-concept logging
+      - Practice structure
+      - Practice linting
+      - ad-hoc AI experiments
+      - finishing project
+      - conscious comparisons between estimation time and completion time
+  - Thu 5/3:
+    - Scope 2, quality 8, changes 4 assumed from recommendation in one-on-one by sparring partner
+    - Scope 4, quality 6, changes 2 should be possible within remaining time frame; prioritizing as such
+      - testing of core underlying components
+      - logging
+      - formalized interfaces to ensure loose coupling of components
+      - architectural overview with package diagram showing interfaces
+      - linted commits
+      - code refactoring to conform to planned-for structure
+      - project conventions document
+      - semi-formalization of git working procedure; gitflow w local rebase over merge
 - Log
   - Mon  2/3
     - planning
@@ -34,6 +47,10 @@
     - discussion notes; pivoting consequences, process planning
     - re-learning plantuml
     - constructing diagram of software architecture
+  - Mon 9/3
+    - added diagram of architecture
+    - added projects conventions document
+    - researched git workflows
 - Discussion
   - AI
     - Time-saver
@@ -54,31 +71,34 @@
 	- Module opinionated wrt logging
 	- Documentation claims otherwise
 	- Likely doable but would require careful (time-intensive) investigation
-    - Mid-project Changes
-      - This tends to happen often
-      - Managers often do not acknowledge the consequences of it
-      - Modified Iron Triangle: Scope:Quality:Changes
-    - Project Conventions
-      - changes
-	- developing and collaborating as a team means conventions are needed
-      - planning
-	- scope of test coverage
-	- formalized interfaces
-      - documentation
-	- architectural overview
-      - style
-	- careful naming
-	- conscious, intentional choices of programming paradigms
-	- compartmentalization
-      - automation
-	- linting: pylint, flake8
-	- standardized testing: pytest
-	- capable logging: verbosity and filtering by module
-      - tools
-	- git for revision control
-	  - rebase over merges; incremental changes visible in log
-	  - squash commits when necessary to only show significant changes
-	  - individual repositories pushed to shared main
-	  - everyone rebasing from shared main before pushing
-	- CI/CD
-	  - no automated continuous integration/delivery/deployment at this time
+  - Mid-project Changes
+    - This tends to happen often
+    - Managers often do not acknowledge the consequences of it
+    - Modified Iron Triangle: Scope:Quality:Changes
+  - Project Conventions
+    - changes
+      - developing and collaborating as a team means conventions are needed
+    - planning
+      - scope of test coverage
+      - formalized interfaces
+    - documentation
+      - architectural overview
+    - style
+      - careful naming
+      - conscious, intentional choices of programming paradigms
+      - compartmentalization
+    - automation
+      - linting: pylint, flake8
+      - standardized testing: pytest
+      - capable logging: verbosity and filtering by module
+    - tools
+      - git for revision control
+      - CI/CD
+	- no automated continuous integration/delivery/deployment at this time
+    - git workflow
+      - gitflow
+	- parallel branches with different requirements and allowances
+	- requires good coordination between developers
+	- resilient to rapid changes in priorities and resource capacities
+    - local rebase and squashing over local merges
+      - preserves history better
